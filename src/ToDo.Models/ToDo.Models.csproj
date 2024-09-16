@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath></OutputPath>
+    <DocumentationFile />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20191124173848_Test.cs" />
+    <Compile Remove="Migrations\20191124173848_Test.Designer.cs" />
+    <Compile Remove="Migrations\20191124174032_Test.cs" />
+    <Compile Remove="Migrations\20191124174032_Test.Designer.cs" />
+    <Compile Remove="Migrations\20191124174244_Test.cs" />
+    <Compile Remove="Migrations\20191124174244_Test.Designer.cs" />
+    <Compile Remove="Migrations\20191124174320_Test.cs" />
+    <Compile Remove="Migrations\20191124174320_Test.Designer.cs" />
+    <Compile Remove="Migrations\20191125223705_NewDescriptionField.cs" />
+    <Compile Remove="Migrations\20191125223705_NewDescriptionField.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.4.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
